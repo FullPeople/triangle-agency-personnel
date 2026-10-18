@@ -1,6 +1,23 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict');
 const T=require('../src/onboarding.js');
+test('the commendation aside and apology are consecutive separate dialogue steps',()=>{
+ const index=T.STEPS.findIndex(step=>step.id==='aside');
+ assert.match(T.STEPS[index].text,/嘉奖/);assert.doesNotMatch(T.STEPS[index].text,/走神/);
+ assert.equal(T.STEPS[index+1].text,'噢，不好意思，我走神了。');
+});
+test('the guide follows a moving target after opening and stops tracking on finish',async()=>{
+ const {parseHTML}=require('linkedom');const {document}=parseHTML('<html><body><button id="target"></button><div id="tour"></div></body></html>');
+ const pending=new Map();let serial=0,x=280;const target=document.querySelector('#target'),root=document.querySelector('#tour');
+ target.getBoundingClientRect=()=>({left:x,top:20,right:x+34,bottom:54,width:34,height:34});
+ const win={innerWidth:390,innerHeight:844,requestAnimationFrame:fn=>{pending.set(++serial,fn);return serial;},cancelAnimationFrame:id=>pending.delete(id),addEventListener(){},MutationObserver:class{observe(){}}};
+ const guide=T.mount({document,window:win,root,resolveTarget:name=>name==='library'?target:null});guide.start();await Promise.resolve();
+ while(root.dataset.step!=='library'){root.querySelector('.tour-next').click();await Promise.resolve();}
+ assert.equal(root.querySelector('.tour-focus').style.left,'273px');assert.equal(pending.size,1);
+ x=215;const [id,tick]=pending.entries().next().value;pending.delete(id);tick();
+ assert.equal(root.querySelector('.tour-focus').style.left,'208px');assert.equal(pending.size,1);
+ guide.finish();assert.equal(pending.size,0);assert.equal(root.hidden,true);
+});
 test('the tutorial cannot pass the archive prompt until the real archive action is acknowledged',()=>{
  const s=T.createSession();s.start();while(s.current().id!=='library')assert.equal(s.next(),true);const at=s.index();assert.equal(s.canNext(),false);assert.equal(s.next(),false);assert.equal(s.index(),at);s.acknowledge('export');assert.equal(s.canNext(),false);s.acknowledge('library');assert.equal(s.canNext(),true);assert.equal(s.next(),true);assert.equal(s.current().id,'create');
 });
