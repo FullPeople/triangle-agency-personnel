@@ -1,0 +1,228 @@
+{
+  "format": "triangle-agency-workbench",
+  "version": 2,
+  "agent": {
+    "id": "session-review-v221",
+    "number": 77,
+    "version": 2,
+    "name": "本地交互验收",
+    "pronouns": "TA",
+    "title": "",
+    "salary": "",
+    "appearance": "",
+    "contact": "人事部",
+    "contactRelation": "同事",
+    "contactMethod": "agent@example.invalid",
+    "fingerprintConfirmed": true,
+    "photo": "data:image/png;base64,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",
+    "arc": {
+      "a": "whisper",
+      "r": "caretaker",
+      "c": "public_relations"
+    },
+    "answers": [
+      0,
+      1,
+      0
+    ],
+    "qa": {
+      "attentiveness": 0,
+      "duplicity": 0,
+      "dynamism": 0,
+      "empathy": 3,
+      "initiative": 3,
+      "persistence": 0,
+      "presence": 3,
+      "professionalism": 0,
+      "subtlety": 0
+    },
+    "qaMax": {
+      "attentiveness": 0,
+      "duplicity": 0,
+      "dynamism": 0,
+      "empathy": 3,
+      "initiative": 3,
+      "persistence": 0,
+      "presence": 3,
+      "professionalism": 0,
+      "subtlety": 0
+    },
+    "qaGrowth": {
+      "attentiveness": 0,
+      "duplicity": 0,
+      "dynamism": 0,
+      "empathy": 0,
+      "initiative": 0,
+      "persistence": 0,
+      "presence": 0,
+      "professionalism": 0,
+      "subtlety": 0
+    },
+    "resources": {
+      "commendations": 17,
+      "demerits": 0,
+      "burnout": 0,
+      "chaos": 0
+    },
+    "behaviors": [
+      false,
+      false,
+      false
+    ],
+    "behaviorBonus": false,
+    "relationships": [
+      {
+        "id": "relation-nine-0",
+        "name": "徐知远",
+        "playedBy": "玩家一",
+        "description": "曾与你共同行动，知道你的一段往事。",
+        "connection": 6,
+        "active": true,
+        "networked": false,
+        "boon": "睿智",
+        "boonActive": false
+      },
+      {
+        "id": "relation-nine-1",
+        "name": "周愉",
+        "playedBy": "玩家二",
+        "description": "熟悉你过去生活的旧友。",
+        "connection": 3,
+        "active": true,
+        "networked": false,
+        "boon": "富于同情心",
+        "boonActive": false
+      },
+      {
+        "id": "relation-nine-2",
+        "name": "梁白",
+        "playedBy": "玩家一",
+        "description": "你曾许诺一定会回来的人。",
+        "connection": 3,
+        "active": true,
+        "networked": false,
+        "boon": "人脉广",
+        "boonActive": true
+      },
+      {
+        "id": "relation-nine-3",
+        "name": "沈见青",
+        "playedBy": "玩家二",
+        "description": "曾与你共同行动，知道你的一段往事。",
+        "connection": 3,
+        "active": true,
+        "networked": false,
+        "boon": "受诅咒",
+        "boonActive": false
+      },
+      {
+        "id": "relation-nine-4",
+        "name": "陆霁",
+        "playedBy": "玩家一",
+        "description": "熟悉你过去生活的旧友。",
+        "connection": 3,
+        "active": true,
+        "networked": false,
+        "boon": "早期采纳者",
+        "boonActive": false
+      },
+      {
+        "id": "relation-nine-5",
+        "name": "唐觉",
+        "playedBy": "玩家二",
+        "description": "你曾许诺一定会回来的人。",
+        "connection": 3,
+        "active": true,
+        "networked": false,
+        "boon": "充满活力",
+        "boonActive": false
+      },
+      {
+        "id": "relation-nine-6",
+        "name": "顾岚",
+        "playedBy": "玩家一",
+        "description": "曾与你共同行动，知道你的一段往事。",
+        "connection": 3,
+        "active": true,
+        "networked": false,
+        "boon": "时髦",
+        "boonActive": false
+      },
+      {
+        "id": "relation-nine-7",
+        "name": "程未",
+        "playedBy": "玩家二",
+        "description": "熟悉你过去生活的旧友。",
+        "connection": 3,
+        "active": true,
+        "networked": false,
+        "boon": "有影响力",
+        "boonActive": false
+      },
+      {
+        "id": "relation-nine-8",
+        "name": "许闻",
+        "playedBy": "玩家一",
+        "description": "你曾许诺一定会回来的人。",
+        "connection": 9,
+        "active": true,
+        "networked": true,
+        "boon": "机动",
+        "boonActive": false
+      }
+    ],
+    "questionnaire": [
+      "在末班列车里，我听到了没有来源的声音。",
+      "一封没有发件地址的录用通知。",
+      "三枚蓝色三角依次点亮。",
+      "无糖，冰美式。",
+      "文案与危机公关。",
+      "熟悉日常协作和报告整理。",
+      "让每个人的声音都被听见。",
+      ""
+    ],
+    "realityAnswers": [
+      "已填写",
+      "已填写",
+      "已填写"
+    ],
+    "arcDetails": {
+      "r:dependent": "本地演示"
+    },
+    "directiveChoice": 0,
+    "realityMarks": 2,
+    "notes": "LEGACY NOTES DO NOT SHOW",
+    "requisitionNotes": "",
+    "practiced": [],
+    "life": {
+      "a": 0,
+      "r": 0,
+      "c": 0,
+      "spent": 0,
+      "crossed": {
+        "a": 0,
+        "r": 0,
+        "c": 0
+      }
+    },
+    "mission": {
+      "commendationsEarned": 0,
+      "demeritsEarned": 0,
+      "equipmentUsed": false,
+      "locationOverload": 0,
+      "number": 1
+    },
+    "pendingRewards": [],
+    "unlocked": [],
+    "equipment": [],
+    "awards": {
+      "mvp": 0,
+      "probation": 0
+    },
+    "log": [],
+    "completed": true,
+    "createdAt": "2026-10-18T04:22:29.685Z",
+    "updatedAt": "2026-10-18T04:22:29.687Z",
+    "growthLedger": []
+  }
+}

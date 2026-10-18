@@ -1,0 +1,12 @@
+{
+  "name": "triangle-agency-personnel",
+  "version": "2.28.0",
+  "description": "三角机构·职工档案",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "build": "python build_offline.py"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": { "linkedom": "0.18.12" }
+}

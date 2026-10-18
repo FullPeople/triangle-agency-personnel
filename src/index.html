@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src data:; img-src data: blob: 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f3f3ef">
+  <meta name="description" content="三角机构·职工档案 / 离线">
+  <title>三角机构·职工档案</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 2 39 37H1Z' fill='%23e42535'/%3E%3Cpath d='m20 16 9 16H11Z' fill='%23f3f3ef'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="fonts.css?v=2.20">
+  <link rel="stylesheet" href="style.css?v=2.20">
+  <link rel="stylesheet" href="kinetic.css?v=2.20">
+  <link rel="stylesheet" href="workflow.css?v=2.20">
+  <link rel="stylesheet" href="official-qa.css?v=2.20">
+  <link rel="stylesheet" href="catalog-ritual.css?v=2.20">
+  <link rel="stylesheet" href="web-motion.css?v=2.20">
+  <script src="vendor/html-to-image.min.js?v=2.20" defer></script>
+  <script src="vendor/pdf-lib.min.js?v=2.20" defer></script>
+  <script src="compatibility.js?v=2.20" defer></script>
+  <script src="workflow.js?v=2.20" defer></script>
+  <script src="catalog-interaction.js?v=2.20" defer></script>
+  <script src="export.js?v=2.20" defer></script>
+  <script src="hover.js?v=2.20" defer></script>
+  <script src="rules.js?v=2.20" defer></script>
+  <script src="storage.js?v=2.21" defer></script>
+  <script src="dice.js?v=2.21" defer></script>
+  <script src="engine.js?v=2.25" defer></script>
+  <script src="live-update.js?v=2.20" defer></script>
+  <script src="motion.js?v=2.28" defer></script>
+  <script src="scroll.js?v=2.20" defer></script>
+  <script src="enrollment.js?v=2.20" defer></script>
+  <link rel="stylesheet" href="credential.css?v=2.20">
+  <link rel="stylesheet" href="compatibility.css?v=2.20">
+  <script src="credential.js?v=2.20" defer></script>
+  <link rel="stylesheet" href="dossier.css?v=2.20">
+  <link rel="stylesheet" href="dossier-fixed.css?v=2.20">
+  <script src="photo.js?v=2.20" defer></script>
+  <script src="mission-view.js?v=2.25" defer></script>
+  <script src="dossier.js?v=2.25" defer></script>
+  <script src="layout.js?v=2.20" defer></script>
+  <script src="import.js?v=2.26" defer></script>
+  <script src="default-agent.js?v=2.27" defer></script>
+  <script src="onboarding.js?v=2.28" defer></script>
+  <script src="app.js?v=2.28" defer></script>
+  <link rel="stylesheet" href="session.css?v=2.21">
+  <link rel="stylesheet" href="missions.css?v=2.25">
+  <link rel="stylesheet" href="import.css?v=2.26">
+  <link rel="stylesheet" href="onboarding.css?v=2.28">
+</head>
+<body>
+  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <filter id="hint-fluid" x="-15%" y="-35%" width="130%" height="170%"><feTurbulence type="fractalNoise" baseFrequency=".012 .065" numOctaves="1" seed="7" result="flow"><animate attributeName="baseFrequency" values=".012 .065;.022 .045;.014 .09;.012 .065" dur="5.4s" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="flow" scale="4.4" xChannelSelector="R" yChannelSelector="G"><animate attributeName="scale" values="3.2;5;3.8;3.2" dur="4.6s" repeatCount="indefinite"/></feDisplacementMap></filter>
+    <filter id="hint-fluid-press" x="-15%" y="-35%" width="130%" height="170%"><feTurbulence type="fractalNoise" baseFrequency=".022 .09" numOctaves="1" seed="7" result="flow"><animate attributeName="baseFrequency" values=".022 .09;.032 .05;.016 .12;.022 .09" dur=".65s" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="flow" scale="5.8" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <symbol id="mark" viewBox="0 0 60 54"><path d="M30 0 60 54H0Zm0 17L14 45h32Z" fill="currentColor" fill-rule="evenodd"/><path d="m26 36 4-7 4 7Z" fill="currentColor"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M3 12h17m-7-7 7 7-7 7"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+    <symbol id="edit" viewBox="0 0 24 24"><path d="m15 4 5 5M4 20l5-1L21 7l-5-5L4 14Z"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><path d="m6 3 15 9-15 9Z"/></symbol>
+    <symbol id="file" viewBox="0 0 24 24"><path d="M4 2h10l6 6v14H4Zm10 0v7h6M8 13h8M8 17h8"/></symbol>
+    <symbol id="folder" viewBox="0 0 24 24"><path d="M3 7V4h7l3 3h8v13H3V7Zm0 3h18"/></symbol>
+    <symbol id="print" viewBox="0 0 24 24"><path d="M6 8V2h12v6M6 18H3V8h18v10h-3M6 14h12v8H6Zm11-3h1"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+    <symbol id="undo" viewBox="0 0 24 24"><path d="m8 4-5 5 5 5M3 9h11a6 6 0 0 1 0 12h-3"/></symbol>
+    <symbol id="motion" viewBox="0 0 24 24"><path d="m4 7 5 5-5 5m7-10 5 5-5 5m7-10 5 5-5 5"/></symbol>
+    <symbol id="settings" viewBox="0 0 24 24"><path d="m9 3 1-2h4l1 2 3 2 2 1v4l2 1v3l-2 1-1 3-2 1-1 3h-4l-1-2-3-1-2-2-2-1v-4l2-1 1-3 2-1Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 5"/></symbol>
+    <symbol id="book" viewBox="0 0 24 24"><path d="M12 5C8 2 4 3 2 4v16c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Zm0 0v16"/></symbol>
+    <symbol id="image" viewBox="0 0 24 24"><path d="M3 3h18v18H3Zm0 14 5-6 5 5 3-3 5 6M15 7h1"/></symbol>
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21S2 15 2 8a5 5 0 0 1 10-2 5 5 0 0 1 10 2c0 7-10 13-10 13Z"/></symbol>
+  </svg>
+  <div class="boot" id="boot" aria-label="启动动画">
+    <div class="boot-coordinate mono" aria-hidden="true">△ / TA</div>
+    <div class="boot-symbol" aria-hidden="true"><div></div><div></div><div></div><svg><use href="#mark"/></svg></div>
+    <strong>三角机构</strong><span class="mono">TRIANGLE AGENCY</span>
+    <div class="boot-line" aria-hidden="true"><i></i></div><button id="skip-boot">跳过</button>
+  </div>
+  <div id="ambient" aria-hidden="true"><i class="ambient-triangle"><svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1"><path d="M120 15 211 173H29Z"/></svg></i><i class="ambient-triangle"><svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1"><path d="M120 15 211 173H29Z"/></svg></i><i class="ambient-triangle"><svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1"><path d="M120 15 211 173H29Z"/></svg></i></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <header class="topbar">
+    <a href="#main" class="brand" aria-label="三角机构"><svg><use href="#mark"/></svg><span><strong>三角机构</strong><small class="mono">TRIANGLE AGENCY</small></span></a>
+    <span class="topbar-separator"></span><span class="topbar-label">职工档案</span>
+    <nav class="mode-tabs" aria-label="工作模式">
+      <button data-mode="edit"><svg><use href="#edit"/></svg>编辑</button>
+      <button data-mode="play"><svg><use href="#play"/></svg>执行</button>
+      <button data-mode="read"><svg><use href="#file"/></svg>档案</button>
+    </nav>
+    <div class="topbar-tools"><button class="icon-button" id="undo-button" aria-label="撤销上次操作" disabled><svg><use href="#undo"/></svg></button><button class="icon-button" data-open="library" aria-label="打开档案库"><svg><use href="#folder"/></svg></button><button class="icon-button" data-open="print" aria-label="打印/预览 A4"><svg><use href="#print"/></svg></button><button class="icon-button" data-open="settings" aria-label="网站设置"><svg><use href="#settings"/></svg></button></div>
+  </header>
+  <aside class="left-rail"><div class="rail-rule"></div><button class="rail-active" data-mode="edit" aria-label="编辑档案"><span class="mono">01</span><svg><use href="#edit"/></svg></button><button data-mode="play" aria-label="执行任务"><span class="mono">02</span><svg><use href="#play"/></svg></button><button data-open="rules" aria-label="规则速查"><span class="mono">03</span><svg><use href="#book"/></svg></button><div class="rail-bottom"><span class="mono">OFFLINE</span><i></i></div></aside>
+  <main id="main" tabindex="-1">
+    <div class="page-head"><div><div class="eyebrow"><i></i><span id="page-eyebrow">PERSONNEL / EDIT</span></div><h1 id="page-title">人员档案<span>.</span></h1></div><div class="page-head-meta"><span class="mono" id="agent-number">TA — 0001</span><button class="outline-button small" id="new-agent"><svg><use href="#plus"/></svg>新建档案</button></div></div>
+    <div id="app"></div>
+    <footer class="workspace-footer"><span class="save-indicator" id="save-status" role="status"><i></i>本地存档</span><span class="mono">ARC / V2.28</span><button class="text-button" data-open="history">操作记录 ↗</button></footer>
+  </main>
+  <dialog id="overlay" class="overlay"><div id="overlay-content"></div></dialog>
+  <dialog id="sheet" class="sheet"><div id="sheet-content"></div></dialog>
+  <div id="tutorial-root" class="tour-root" hidden></div>
+  <input id="import-input" type="file" accept="application/json,.json" multiple hidden>
+  <input id="photo-input" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+  <div id="archive-drop-indicator" class="archive-drop-indicator" aria-hidden="true"><div class="archive-drop-center" role="status" aria-live="polite"><span class="mono">PERSONNEL / IMPORT</span><span class="archive-drop-mark" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50 7 97 88H3Z"/><path d="M50 22 84 81H16Z"/></svg><b>↓</b></span><strong>松开导入档案</strong><small>JSON · 可同时拖入多份档案<br>已有档案保留</small></div></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="print-root"></div>
+</body>
+</html>
